@@ -1,7 +1,11 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
+
 using Foundation;
+
+using static Rocks.TupleBuilder;
+using static Rocks.ListBuilder;
 
 namespace Rocks
 {
@@ -24,7 +28,7 @@ namespace Rocks
 
 		public KeySetup<TKey, TValue> Value<TValue> (TValue value)
 		{
-			return new KeySetup<TKey, TValue> (new List<Tuple<TKey, TValue>> { new Tuple<TKey, TValue> (key, value) });
+			return new KeySetup<TKey, TValue> (List (Tuple (key, value)));
 		}
 	}
 
@@ -41,7 +45,7 @@ namespace Rocks
 
 		public ValueSetup<TKey, TValue> Key (TKey key)
 		{
-			list.Add (new Tuple<TKey, TValue> (key, default (TValue)));
+			list.Add (Tuple(key, default (TValue)));
 			return new ValueSetup<TKey, TValue> (list);
 		}
 
@@ -70,7 +74,7 @@ namespace Rocks
 		{
 			var index = list.Count - 1;
 			var tpl = list [index];
-			list [index] = new Tuple<TKey, TValue> (tpl.Item1, value);
+			list [index] = Tuple (tpl.Item1, value);
 
 			return new KeySetup<TKey, TValue> (list);
 		}
