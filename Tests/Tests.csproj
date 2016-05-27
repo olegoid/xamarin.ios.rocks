@@ -104,6 +104,7 @@
     <Compile Include="Main.cs" />
     <Compile Include="UnitTestAppDelegate.cs" />
     <Compile Include="NSDictionaryBuilderFixture.cs" />
+    <Compile Include="NSDictionaryFluentBuilderFixture.cs" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\Rocks\Rocks.csproj">
