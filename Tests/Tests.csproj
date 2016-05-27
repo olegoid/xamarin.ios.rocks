@@ -106,7 +106,7 @@
     <Compile Include="NSDictionaryBuilderFixture.cs" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\Rocks.csproj">
+    <ProjectReference Include="..\Rocks\Rocks.csproj">
       <Project>{F664B039-829F-4828-AEE6-DCD51BDF659C}</Project>
       <Name>Rocks</Name>
     </ProjectReference>
